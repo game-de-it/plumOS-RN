@@ -23,7 +23,9 @@ PROJECT_DIR="${ROOT}/projects"
 HOME="${ROOT}"
 
 # determines DISTRO, if not forced by user
-DISTRO="${DISTRO:-ROCKNIX}"
+DISTRO="plumOS-RN"
+#DISTRO="${DISTRO:-ROCKNIX}"
+#DISTRO="${DISTRO:-plumOS-RN}"
 
 # determines PROJECT, if not forced by user
 PROJECT="${PROJECT:-Rockchip}"
@@ -36,7 +38,7 @@ TARGET_ARCH="${ARCH}"
 ENABLE_32BIT="${ENABLE_32BIT-true}"
 
 # determines the default device, if not forced by user
-DEVICE="${DEVICE:-RK3588}"
+DEVICE="${DEVICE:-RK3566}"
 
 # the version is the date
 OS_VERSION=$(date +%Y%m%d)

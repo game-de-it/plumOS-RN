@@ -8,31 +8,31 @@
   HARDENING_SUPPORT="no"
 
 # The name of the parent organization for updates
-  GIT_ORGANIZATION="ROCKNIX"
+  GIT_ORGANIZATION="plumOS-RN"
 
 # The name of the github project for updates
-  GIT_REPO="distribution"
+  GIT_REPO="plumOS-RN"
 
 # Name of the Distro to build (full name, without special characters)
-  DISTRONAME="ROCKNIX"
+  DISTRONAME="plumOS-RN"
 
 # Name of the OS to build (full name, lower case, without special characters)
-  OSNAME="rocknix"
+  OSNAME="plumOS-RN"
 
 # short project description
   DESCRIPTION="An Open Source firmware."
 
 # Distribution Home URL
-  HOME_URL="https://rocknix.org"
+  HOME_URL="https://github.com/game-de-it/plumOS-RN"
 
 # Documentation URL
-  WIKI_URL="https://rocknix.org"
+  WIKI_URL="https://github.com/game-de-it/plumOS-RN"
 
 # Where to report bugs
-  BUG_REPORT_URL="https://rocknix.org"
+  BUG_REPORT_URL="https://github.com/game-de-it/plumOS-RN"
 
 # Root password to integrate in the target system
-  ROOT_PASSWORD="rocknix"
+  ROOT_PASSWORD="plumos"
 
 # Install glibc locales to the build (yes / no)
   GLIBC_LOCALES="yes"
@@ -180,7 +180,7 @@
 
 # Distribution Specific source location
   DISTRO_MIRROR=""
-  DISTRO_SRC="https://github.com/ROCKNIX"
+  DISTRO_SRC="https://github.com/game-de-it/plumOS-RN"
 
 # Default size of system partition, in MB, eg. 512
   SYSTEM_SIZE=2048
@@ -195,7 +195,7 @@
   GET_HANDLER_SUPPORT="archive git file"
 
 # Partition labels for USB/SD installation media
-  DISTRO_BOOTLABEL="ROCKNIX"
+  DISTRO_BOOTLABEL="PLUMOS-RN"
   DISTRO_DISKLABEL="STORAGE"
 
 # Settings package name - blank if not required
