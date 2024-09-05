@@ -8,7 +8,7 @@ PKG_SECTION="emulation" # Do not change to virtual or makeinstall_target will no
 PKG_LONGDESC="Emulation metapackage."
 PKG_TOOLCHAIN="manual"
 
-PKG_EMUS="amiberry flycast-sa gzdoom-sa hatarisa hypseus-singe moonlight mupen64plus-sa openbor pico-8 ppsspp-sa vice-sa"
+PKG_EMUS="amiberry flycast-sa gzdoom-sa hatarisa hypseus-singe moonlight mupen64plus-sa openbor pico-8 ppsspp-sa vice-sa pyxel"
 
 PKG_RETROARCH="core-info libretro-database retroarch retroarch-assets retroarch-joypads retroarch-overlays slang-shaders"
 
@@ -807,6 +807,10 @@ makeinstall_target() {
   add_emu_core pico-8 pico-8 pico8 true
   add_emu_core pico-8 retroarch fake08 false
   add_es_system pico-8
+
+  ### pyxel
+  add_emu_core pyxel pyxel pyxel true
+  add_es_system pyxel
 
   ### Sony Playstation
   case ${DEVICE} in

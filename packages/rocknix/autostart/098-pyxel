@@ -1,0 +1,32 @@
+#!/bin/sh
+
+PYTHON_VER="Python-3.11.7"
+PYXEL_VER="pyxel-2.2.1"
+BASE_FILE="${PYTHON_VER}_${PYXEL_VER}.tar.gz"
+
+PYXELROOT="/storage/pyxel_Python"
+
+mkdir -p /storage/roms/pyxel
+
+if [ ! -d /storage/${PYTHON_VER} ]; then
+  if [ ! -L "${PYXELROOT}" ]; then
+    rsync -av /usr/share/pyxel/${BASE_FILE} /storage/${BASE_FILE}
+    cd /storage/
+    tar zxvf ${BASE_FILE}
+    rm ${BASE_FILE}
+    rm /storage/pyxel_Python
+    ln -s /storage/${PYTHON_VER} /storage/pyxel_Python
+    cp -a /usr/bin/pyxel_plumOS.sh /storage/pyxel_Python/bin/pyxel_plumOS.sh
+  else
+    rsync -av /usr/share/pyxel/${BASE_FILE} /storage/${BASE_FILE}
+    cd /storage/
+    tar zxvf ${BASE_FILE}
+    rm ${BASE_FILE}
+    rm /storage/pyxel_Python
+    ln -s /storage/${PYTHON_VER} /storage/pyxel_Python
+    cp -a /usr/bin/pyxel_plumOS.sh /storage/pyxel_Python/bin/pyxel_plumOS.sh
+  fi
+elif [ ! -L "${PYXELROOT}" ]; then
+    ln -s /storage/${PYTHON_VER} /storage/pyxel_Python
+    cp -a /usr/bin/pyxel_plumOS.sh /storage/pyxel_Python/bin/pyxel_plumOS.sh
+fi
