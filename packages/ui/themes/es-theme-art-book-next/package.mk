@@ -15,4 +15,6 @@ PKG_TOOLCHAIN="manual"
 makeinstall_target() {
   mkdir -p ${INSTALL}/usr/share/themes/${PKG_NAME}
   cp -rf * ${INSTALL}/usr/share/themes/${PKG_NAME}
+  cp ${PKG_DIR}/sources/pyxel.png ${INSTALL}/usr/share/themes/${PKG_NAME}/_inc/systems/
+  rsync -a ${PKG_DIR}/sources/es-theme-art-book-next-plumOS ${INSTALL}/usr/share/themes/
 }
