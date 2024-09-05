@@ -11,7 +11,7 @@
 VOLUME=$(get_setting "audio.volume")
 MAX_VOLUME=100
 MIN_VOLUME=0
-STEP=10
+STEP=3
 
 case ${1} in
   "+"|"up")
