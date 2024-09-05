@@ -1,0 +1,18 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (C) 2024 plumOS (https://github.com/game-de-it/plumOS)
+
+PIPEWIREDIR="/storage/.config/pipewire/pipewire.conf.d"
+EQSINKFILE="sink-eq6.conf"
+ALSASINK="alsa_output._sys_devices_platform_sound_sound_card1.HiFi__Headphones__sink"
+
+#if [ ! -f "${PIPEWIREDIR}"/"${EQSINKFILE}" ]
+if [ ! -f "${PIPEWIREDIR}"/firstboot ]
+then
+  mkdir -p "${PIPEWIREDIR}"
+  cp -a /usr/config/pipewire/pipewire.conf.d/sink-eq6.conf "${PIPEWIREDIR}"/"${EQSINKFILE}"
+  /usr/bin/Equalizer.sh
+  sleep 0.3
+  /usr/bin/Equalizer.sh
+  touch "${PIPEWIREDIR}"/firstboot
+fi
