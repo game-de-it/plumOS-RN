@@ -37,7 +37,7 @@ https://rocknix.org/
 [NEW] Version 1.0 has been released!
 
 ## Basic Features
-- Pyxel v2.2.1 runs on this OS.
+- [Pyxel v2.2.1](https://github.com/kitao/pyxel) runs on this OS.
 - Equipped with an equalizer to improve sound quality.
 
 ## Known Issues

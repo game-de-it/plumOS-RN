@@ -37,7 +37,7 @@ https://rocknix.org/
 [NEW] 1.0 をリリースしました！
 
 ## 基本的な機能
-- pyxel v2.2.1が動作します
+- [pyxel v2.2.1](https://github.com/kitao/pyxel) が動作します
 - イコライザー機能を搭載して音質を改善
 
 ## 既知の問題
