@@ -1,14 +1,13 @@
 <img src="./distributions/plumOS-RN/logos/plumOS-RN_logo.png" width="640">  
 
-[Latest Version 1.0](https://github.com/game-de-it/plumOS-RN/releases) 
+[Latest Version 2.0](https://github.com/game-de-it/plumOS-RN/releases/tag/20241121) 
 
 ---
 # Introduction
-[Click here for the English version of the explanation](./README_EN.md)
 
-plumOS-RN is an OS created by forking ROCKNIX.  
-It inherits the basic functionality of ROCKNIX and adds a few convenient features.  
-Huge thanks to the great development team at ROCKNIX and all the open source projects.  
+plumOS-RN is an OS forked from ROCKNIX.  
+It inherits the core functionality of ROCKNIX while adding a few convenient features.  
+Special thanks to the ROCKNIX development team and all contributors to open-source projects for their tremendous efforts.  
 
 ## Supported Devices
 - Anbernic
@@ -18,86 +17,136 @@ Huge thanks to the great development team at ROCKNIX and all the open source pro
   - RG353V
   - RG503 
   - RG-ARC-S
-  - RG-ARC-D (Requires removal of Android)
+  - RG-ARC-D (Android must be removed)
 
 - Powkiddy
+  - RGB20 Pro
+  - X55
   - RK2023
   - RGB20SX
   - RGB30
-  - RGB30r2 (Later manufactured models)
+  - RGB30r2 (later-manufactured models)
   - RGB10MAX3
 
-Please check the following website for details on the basic functions of the OS and each device.  
+You can check the core functionality of the OS and details for each device on the website below:  
 https://rocknix.org/
 
-## Download
-[You can download the file from the "Releases page"](https://github.com/game-de-it/plumOS-RN/releases)
+## Downloads
+[Files can be downloaded from the "Releases" page](https://github.com/game-de-it/plumOS-RN/releases)
 
-## Update History
-[NEW] Version 1.0 has been released!
+## Changelog
+- [NEW] Based on ROCKNIX Ver 20241029  
+- [NEW] picoarch is now available  
+- [NEW] Added support for Powkiddy RGB20 Pro and X55  
+- [NEW] Pyxel now supports online updates  
 
-## Basic Features
-- [Pyxel v2.2.1](https://github.com/kitao/pyxel) runs on this OS.
-- Equipped with an equalizer to improve sound quality.
+## Key Features
+- **[pyxel](https://github.com/kitao/pyxel) compatibility**
+  - Run `pyxel_update` from the `tools` section in Emulationstation to update pip and pyxel to the latest version.
+- **Built-in equalizer to enhance audio quality**
+  - Toggle the Equalizer on or off by running `Equalizer` from the `tools` section in Emulationstation.  
+    (The current ON/OFF status is not displayed intentionally.)
+- **picoarch compatibility**
+  - Some libretro cores may not work with controllers; use a USB keyboard instead (e.g., fmsx).
+  - Refer to picoarch documentation for details.
 
 ## Known Issues
-It is unclear whether the SD card used in JELOS or the old plumOS SD2 slot is compatible.  
-Especially, portmaster may not work due to different specifications depending on the device or OS.  
-Please make sure to back up before trying.
+- Compatibility with SD cards previously used in the SD2 slot of JELOS or older plumOS versions is uncertain.  
+- Portmaster may not function properly due to differences in hardware or OS specifications.  
+  Please ensure you have backups before testing.
 
-## Features Planned for Future Support
-- Support for picoarch.
-- Enable the video recording feature of RetroArch.
-- OTA updates (offline updates are supported).
+## Features Planned for Future Releases
+- Enable video recording in Retroarch  
+- Implement OTA updates (offline updates are already supported)  
+
+## picoarch Specifications
+- **How to Use picoarch**
+  - Press the Select button on the ROM selection screen and choose the emulator from `ADVANCED SYSTEM OPTIONS`.
+<img src="https://github.com/game-de-it/plumOS-RN/blob/main/documentation/asset/sc02.jpg" width="320">  
+
+- **Location of Save Data**
+  - Save data is stored in the `/storage/.config/.picoarch/data/` directory.
+  
+- **Supported libretro cores**
+
+| libretro Core |  |
+|:-------|-------:|
+| beetle_wswan    |   gpsp  |   
+| dosbox_pure     |   mgba  | 
+| fmsx            |   snes9x  |  
+| beetle-pce-fast |   snes9x2010  |
+| quicknes        |   picodrive  | 
+| fceumm          |   gearsystem  | 
+| nestopia        |   msplus-gx  | 
+| gambatte        |  beetle_ngp   | 
+| pcsx_rearmed    | |
+
+- **picoarch Hotkeys**
+
+| Button Combo    | Action                  | 
+|:----------------|-------------------------:|
+| SELECT+START    | Open Retroarch menu     |
+| SELECT+R        | Save state              |
+| SELECT+L        | Load state              |
+| SELECT+R2       | Fast forward (2x speed) |
+| SELECT+L2       | Display FPS             |
+
+- **picoarch Resolutions**
+
+| Name           | Resolution | 
+|:---------------|------------:|
+| picoarch_LD    | 320x240     |
+| picoarch_HD    | 640x480     |
+| picoarch_720   | 720x720     |
+| picoarch_1024  | 1024x768    |
 
 ## Retroarch Specifications
-- Save files and state saves are created in the same folder as the ROM file (this can be changed).
-- State save files are created in the same folder as the ROM file (this can be changed).
-- RetroArch hotkeys:
-  - *Hotkey settings can be freely customized.*  
+- Save files and state saves are created in the same folder as the ROM file (modifiable).
+- **Retroarch Hotkeys**  
+  (*Hotkey settings are customizable.*)
 
-| Button Combo | Action | 
-|:-----------|------------:|
-| SELECT+B     |      Open Retroarch menu |
-| SELECT+R       |        Save state |
-| SELECT+L     |      Load state |
-| SELECT+R2     |      Fast forward (x2 speed) |
-| SELECT+L2     |      Slow motion (x1.5 speed) |
-| SELECT+X     |      Take screenshot (roms/screenshots) |
-| SELECT+Y     |      Display FPS |
+| Button Combo    | Action                    | 
+|:----------------|---------------------------:|
+| SELECT+B        | Open Retroarch menu       |
+| SELECT+R        | Save state                |
+| SELECT+L        | Load state                |
+| SELECT+R2       | Fast forward (2x speed)   |
+| SELECT+L2       | Slow motion (1.5x speed)  |
+| SELECT+X        | Take snapshot (saved in `roms/screenshots`) |
+| SELECT+Y        | Display FPS               |
 
 ## OS Hotkeys
-| Button Combo | Action | 
-|:-----------|------------:|
-| SELECT+Vol+       |        Increase screen brightness |
-| SELECT+Vol-       |        Decrease screen brightness |
+| Button Combo   | Action                  | 
+|:---------------|-------------------------:|
+| SELECT+Vol+    | Increase screen brightness |
+| SELECT+Vol-    | Decrease screen brightness |
 
 ---
 
 ## Licenses
 
-**ROCKNIX** is a fork of [JELOS](https://jelos.org/), all licenses apply and credit to the JELOS team. 
+**ROCKNIX** is a fork of [JELOS](https://jelos.org/), and all licenses apply, with credit given to the JELOS team. 
 
 You are free to:
 
-- Share: copy and redistribute the material in any medium or format
-- Adapt: remix, transform, and build upon the material
+- **Share**: Copy and redistribute the material in any medium or format.
+- **Adapt**: Remix, transform, and build upon the material.
 
 Under the following terms:
 
-- Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- NonCommercial: You may not use the material for commercial purposes.
-- ShareAlike: If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+- **Attribution**: Provide proper credit, a link to the license, and indicate changes made.  
+- **NonCommercial**: You may not use the material for commercial purposes.  
+- **ShareAlike**: Distribute contributions under the same license as the original.  
 
 ### ROCKNIX Software
 
-Copyright 2024 [ROCKNIX](https://github.com/ROCKNIX)
+Copyright (C) 2024-present [ROCKNIX](https://github.com/ROCKNIX)
 
-Original software and scripts developed by the ROCKNIX are licensed under the terms of the [GNU GPL Version 2](https://choosealicense.com/licenses/gpl-2.0/).  The full license can be found in this project's licenses folder.
+Original software and scripts developed by ROCKNIX are licensed under the [GNU GPL Version 2](https://choosealicense.com/licenses/gpl-2.0/). Full license details are in this project's licenses folder.
 
 ### Bundled Works
-All other software is provided under each component's respective license.  These licenses can be found in the software sources or in this project's licenses folder.  Modifications to bundled software and scripts by the JELOS team are licensed under the terms of the software being modified.
+All other software is provided under their respective licenses. These licenses can be found in the software sources or in this project's licenses folder. Modifications to bundled software and scripts by the JELOS team are licensed under the software's original terms.
 
 ## Credits
 
-Like any Linux distribution, this project is not the work of one person.  It is the work of many persons all over the world who have developed the open source bits without which this project could not exist.  Special thanks to CoreELEC, LibreELEC, JELOS, and to developers and contributors across the open source community.
+This project, like any Linux distribution, is a collective effort. Special thanks to CoreELEC, LibreELEC, JELOS, and developers and contributors from the open-source community.
