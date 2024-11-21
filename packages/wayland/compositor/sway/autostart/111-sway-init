@@ -74,3 +74,8 @@ echo "${output} transform ${angle}" >> $SWAY_HOME/config
 echo "${output} bg #000000 solid_color" >> $SWAY_HOME/config
 echo "${output} max_render_time off" >> $SWAY_HOME/config
 
+echo "bindsym Mod1+Return fullscreen" >> $SWAY_HOME/config
+echo "for_window [app_id="picoarch_plumOS_LD"] fullscreen"   >> $SWAY_HOME/config
+echo "for_window [app_id="picoarch_plumOS_HD"] fullscreen"   >> $SWAY_HOME/config
+echo "for_window [app_id="picoarch_plumOS_720"] fullscreen"  >> $SWAY_HOME/config
+echo "for_window [app_id="picoarch_plumOS_1024"] fullscreen" >> $SWAY_HOME/config

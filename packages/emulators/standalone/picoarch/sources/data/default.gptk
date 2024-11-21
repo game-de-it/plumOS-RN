@@ -8,6 +8,8 @@ up = none
 down = none
 left = none
 right = none
+left_trigger = none
+right_trigger = none
 
 left_analog_as_mouse = false
 right_analog_as_mouse = false

@@ -147,6 +147,18 @@ case ${EMULATOR} in
     set_kill set "-9 mednafen"
     RUNTHIS='${RUN_SHELL} /usr/bin/start_mednafen.sh "${ROMNAME}" "${CORE}" "${PLATFORM}"'
   ;;
+  picoarch_LD)
+    /storage/.config/.picoarch/bin/picoarch_plumOS.sh "${ROMNAME}" "${CORE}" ${EMULATOR}
+  ;;
+  picoarch_HD)
+    /storage/.config/.picoarch/bin/picoarch_plumOS.sh "${ROMNAME}" "${CORE}" ${EMULATOR}
+  ;;
+  picoarch_720)
+    /storage/.config/.picoarch/bin/picoarch_plumOS.sh "${ROMNAME}" "${CORE}" ${EMULATOR}
+  ;;
+  picoarch_1024)
+    /storage/.config/.picoarch/bin/picoarch_plumOS.sh "${ROMNAME}" "${CORE}" ${EMULATOR}
+  ;; 
   pyxel)
     /storage/pyxel_Python/bin/pyxel_plumOS.sh "${ROMNAME}" "${CORE}" ${EMULATOR}
   ;;
