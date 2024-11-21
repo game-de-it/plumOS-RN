@@ -88,10 +88,10 @@ JELOSや旧plumOSのSD2スロットで利用していたSDカードと互換性�
 
 | Button Combo | Action | 
 |:-----------|------------:|
-| SELECT+START     |      Retroarchメニュー表示 |
+| SELECT+START     |      メニュー表示 |
 | SELECT+R       |        ステートセーブ |
 | SELECT+L     |      ステートロード |
-| SELECT+R2     |      ファストフォワード(早送りx2倍) |
+| SELECT+R2     |      ファストフォワード(早送り) |
 | SELECT+L2     |      FPS表示 |
 
 - picoarchの解像度
@@ -107,7 +107,6 @@ JELOSや旧plumOSのSD2スロットで利用していたSDカードと互換性�
 
 ## Retroarchの仕様
 - セーブファイルおよびステートセーブはromファイルと同じフォルダに作成されます(変更可能)
-- ステートセーブファイルはromファイルと同じフォルダに作成されます(変更可能)
 - RetroArchのホットキー
   - ※Hotkeyの設定は自由に変更可能です  
 
