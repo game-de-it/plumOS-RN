@@ -26,6 +26,18 @@ then
   EXCLUDE="--exclude=configs"
 fi
 
+### pyxel
+if [ -d /storage/Python-3.11.7 ]; then
+  if [ ! -f /storage/Python-3.11.7/bin/pip ]; then
+    mkdir -p /storage/Python-3.11.7
+    cp /usr/share/pyxel/Python-3.11.7_pyxel.tar.gz /tmp/
+    cd /tmp
+    tar zxvf Python-3.11.7_pyxel.tar.gz
+    rsync -a ./Python-3.11.7/ /storage/Python-3.11.7/
+    sync
+  fi
+fi  
+
 ### Remove and link es configs so they are managed with OS updates.
 for es_cfg in es_features.cfg es_systems.cfg
 do

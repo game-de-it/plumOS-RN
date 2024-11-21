@@ -154,7 +154,7 @@
   SWAPFILESIZE="384"
 
 # Default weston terminal font size
-  WESTONFONTSIZE="14"
+  WESTONFONTSIZE="18"
 
 # additional packages to install:
 # Space separated list is supported,

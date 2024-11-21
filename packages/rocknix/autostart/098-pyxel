@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PYTHON_VER="Python-3.11.7"
-PYXEL_VER="pyxel-2.2.1"
+PYXEL_VER="pyxel"
 BASE_FILE="${PYTHON_VER}_${PYXEL_VER}.tar.gz"
 
 PYXELROOT="/storage/pyxel_Python"

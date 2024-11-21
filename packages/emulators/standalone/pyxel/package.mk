@@ -22,7 +22,7 @@ make_target() {
 makeinstall_target() {
 mkdir -p ${INSTALL}/usr/bin
 mkdir -p ${INSTALL}/usr/share/pyxel
-rsync -av ${PKG_DIR}/sources/Python-3.11.7_pyxel-2.2.1.tar.gz ${INSTALL}/usr/share/pyxel/Python-3.11.7_pyxel-2.2.1.tar.gz
+rsync -av ${PKG_DIR}/sources/Python-3.11.7_pyxel.tar.gz ${INSTALL}/usr/share/pyxel/Python-3.11.7_pyxel.tar.gz
 rsync -av ${PKG_DIR}/sources/pyxel_plumOS.sh ${INSTALL}/usr/bin/pyxel_plumOS.sh
 
 }
