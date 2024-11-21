@@ -36,10 +36,10 @@ https://rocknix.org/
 [「Releasesページ」からファイルをダウンロードできます](https://github.com/game-de-it/plumOS-RN/releases)
 
 ## 更新履歴
-[NEW] ROCKNIX Ver 20241029をベースとしました
-[NEW] picoarchが利用可能
-[NEW] Powkiddy RGB20 ProとX55がサポート対象
-[NEW] Pyxelがオンラインアップデートに対応
+[NEW] ROCKNIX Ver 20241029をベースとしました  
+[NEW] picoarchが利用可能  
+[NEW] Powkiddy RGB20 ProとX55がサポート対象  
+[NEW] Pyxelがオンラインアップデートに対応  
 
 ## 基本的な機能
 - [pyxel](https://github.com/kitao/pyxel) が動作します
