@@ -1,6 +1,6 @@
 <img src="./distributions/plumOS-RN/logos/plumOS-RN_logo.png" width="640">  
 
-[Latest Version 1.0](https://github.com/game-de-it/plumOS-RN/releases) 
+[Latest Version 2.0](https://github.com/game-de-it/plumOS-RN/releases/tag/20241121) 
 
 ---
 # はじめに
@@ -21,6 +21,8 @@ ROCKNIXの偉大な開発チームおよび全てのオープンソースプロ�
   - RG-ARC-D (Androidを消す必要あり)
 
 - Powkiddy
+  - RGB20 Pro
+  - X55
   - RK2023
   - RGB20SX
   - RGB30
@@ -34,11 +36,20 @@ https://rocknix.org/
 [「Releasesページ」からファイルをダウンロードできます](https://github.com/game-de-it/plumOS-RN/releases)
 
 ## 更新履歴
-[NEW] 1.0 をリリースしました！
+[NEW] ROCKNIX Ver 20241029をベースとしました
+[NEW] picoarchが利用可能
+[NEW] Powkiddy RGB20 ProとX55がサポート対象
+[NEW] Pyxelがオンラインアップデートに対応
 
 ## 基本的な機能
-- [pyxel v2.2.1](https://github.com/kitao/pyxel) が動作します
+- [pyxel](https://github.com/kitao/pyxel) が動作します
+  - Emulationstationの`tools`セクションから`pyxel_update`を実行すると、pipとpyxelが最新バージョンにアップデートされます
 - イコライザー機能を搭載して音質を改善
+  - Emulationstationの`tools`セクションから`Equalizer`を実行すると、Equalizerの機能をON/OFFできます  
+(現在の状況がONなのかOFFなのかは、あえて表示していません)
+- picoarchが利用可能
+  - libretroコアによってはコントローラが効かないため、USBキーボードを利用してください(例えばfmsx)
+  - 詳しくはpicoarchの仕様を参照してください
 
 ## 既知の問題
 JELOSや旧plumOSのSD2スロットで利用していたSDカードと互換性があるかわかりません。  
@@ -46,9 +57,53 @@ JELOSや旧plumOSのSD2スロットで利用していたSDカードと互換性�
 バックアップをとってからお試しください。
 
 ## 将来対応させたい機能
-- picoarchの動作
 - retroarchの動画録画機能を動作させる
 - OTAアップデート(オフラインアップデートには対応しています)
+
+
+## picoarchの仕様
+- picoarchの利用方法
+  - ROM選択画面でセレクトボタンを押して`ADVANCED SYSTEM OPTIONS`からエミュレータの選択をしてください
+<img src="https://github.com/game-de-it/plumOS-RN/blob/main/documentation/asset/sc02.jpg" width="320">  
+
+
+- picoarchのセーブデータの場所
+  - セーブデータなどは`/storage/.config/.picoarch/data/`ディレクトリに保存されます。
+  
+- サポートしているlibretroコア
+
+| libretroコア |  |
+|:-------|-------:|
+| beetle_wswan    |   gpsp  |   
+|  dosbox_pure    |   mgba  | 
+|  fmsx |   snes9x  |  
+|   beetle-pce-fast  |   snes9x2010  |
+|   quicknes  |   picodrive  | 
+|   fceumm  |   gearsystem  | 
+|  nestopia   |   msplus-gx  | 
+|  gambatte   |  beetle_ngp   | 
+|   pcsx_rearmed  | |
+
+- picoarchのホットキー
+
+| Button Combo | Action | 
+|:-----------|------------:|
+| SELECT+START     |      Retroarchメニュー表示 |
+| SELECT+R       |        ステートセーブ |
+| SELECT+L     |      ステートロード |
+| SELECT+R2     |      ファストフォワード(早送りx2倍) |
+| SELECT+L2     |      FPS表示 |
+
+- picoarchの解像度
+
+| 名前 | 解像度 | 
+|:-----------|------------:|
+| picoarch_LD     |  320x240 |
+| picoarch_HD       |  640x480 |
+| picoarch_720     |   720x720 |
+| picoarch_1024     |  1024x768 |
+
+
 
 ## Retroarchの仕様
 - セーブファイルおよびステートセーブはromファイルと同じフォルダに作成されます(変更可能)
