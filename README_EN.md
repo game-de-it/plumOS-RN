@@ -85,10 +85,10 @@ https://rocknix.org/
 
 | Button Combo    | Action                  | 
 |:----------------|-------------------------:|
-| SELECT+START    | Open Retroarch menu     |
+| SELECT+START    | Open  menu     |
 | SELECT+R        | Save state              |
 | SELECT+L        | Load state              |
-| SELECT+R2       | Fast forward (2x speed) |
+| SELECT+R2       | Fast forward  |
 | SELECT+L2       | Display FPS             |
 
 - **picoarch Resolutions**
