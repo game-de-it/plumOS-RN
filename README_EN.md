@@ -43,6 +43,7 @@ https://rocknix.org/
 ## Key Features
 - **[pyxel](https://github.com/kitao/pyxel) compatibility**
   - Run `pyxel_update` from the `tools` section in Emulationstation to update pip and pyxel to the latest version.
+  - To install a python package via command line, use `/storage/pyxel_Python/bin/pip3 install <package name>`
 - **Built-in equalizer to enhance audio quality**
   - Toggle the Equalizer on or off by running `Equalizer` from the `tools` section in Emulationstation.  
     (The current ON/OFF status is not displayed intentionally.)
