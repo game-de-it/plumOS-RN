@@ -44,6 +44,7 @@ https://rocknix.org/
 ## 基本的な機能
 - [pyxel](https://github.com/kitao/pyxel) が動作します
   - Emulationstationの`tools`セクションから`pyxel_update`を実行すると、pipとpyxelが最新バージョンにアップデートされます
+  - コマンドラインでpythonパッケージをインストールする場合は`/storage/pyxel_Python/bin/pip3 install <パッケージ名>`
 - イコライザー機能を搭載して音質を改善
   - Emulationstationの`tools`セクションから`Equalizer`を実行すると、Equalizerの機能をON/OFFできます  
 (現在の状況がONなのかOFFなのかは、あえて表示していません)
